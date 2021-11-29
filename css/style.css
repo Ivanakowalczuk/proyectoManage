@@ -1,5 +1,4 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap');
 
 *{
@@ -169,6 +168,69 @@ section.section2 article.articulo1{
        padding: 10px;
        color:#B3B2B7;
    }
+/*Sección 3*/
+
+section.section3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+section.section3 h2{
+    font-family: 'Be Vietnam Pro', sans-serif; 
+    font-size: 2rem;
+    color: #232851;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+section.section3 div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   flex-wrap: wrap;
+   width: 100vw;
+   margin-bottom: 20px;
+}
+
+section.section3 div article img{
+    width: 70px;
+    padding-bottom: 20px;
+}
+section.section3 div article{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color:  #FAFAFA;
+    text-align: center;
+    font-family: 'Be Vietnam Pro', sans-serif; 
+    padding: 20px;
+    width: 90%;
+}
+
+section.section3 div article p{
+ font-size: 1rem;
+ color: #B9B9C1;
+ font-weight: 400;
+ padding-bottom: 20px;
+ padding-top: 20px;
+}
+section.section3 button{
+    text-align: center;
+}
+
+section.section3 div article.cardRichard{
+    display: none;
+}
+
+section.section3 div article.cardAnisha{
+    display: none;
+}
+
+
 /*Responsive*/
 @media (min-width: 665px){
     /* Tablets */
@@ -230,5 +292,16 @@ section.section2 article.articulo1{
         section.section2 article.articulo2 div div.titulo{
             background-color: white;
 } 
+
+section.section3 div article{
+    width: 30%;
+}
+section.section3 div article.cardRichard{
+    display: flex;
+}
+
+section.section3 div article.cardAnisha{
+    display: flex;
+}
 
 }
