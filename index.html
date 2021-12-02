@@ -6,35 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Manage</title>
+       <title>Manage</title>
     <link rel="shortcut icon" href="./img/favicon.png">
 </head>
 <body>
- <header>
-   <nav>
-    <img src="./img/Logo.png" alt="Logo">
-    <i class="fas fa-bars"></i>
-     <ul>
+ 
+    <header class="main-header">
+      <h1>Manage Funcionalidad para su test</h1>
+      <img class="logo1" src="./img/Logo.png" alt="Logo">  
+     <nav id="nav" class="main-nav">
+      <img  src="./img/Logo.png" alt="Logo">
+      <ul class="lista-menu">
        <li>
-        <a href="">Pricing</a>
+        <a class="link-item" href="#">Pricing</a>
        </li>
        <li>
-        <a href="">Product</a>
+        <a class="link-item" href="#">Product</a>
        </li>
        <li>
-        <a href="">About as</a>
+        <a class= "link-item" href="#">About as</a>
        </li>
-       <li>
-        <a href="">Careers</a>
+       <li >
+        <a class= "link-item" href="#">Careers</a>
        </li>
-       <li>
-        <a href="">Community</a>
+       <li >
+        <a class= "link-item" href="#">Community</a>
        </li>
      </ul>
      
       <button class="btn bg-orange">Get Started</button>
    </nav>
-    </header>
+   <button id="button-menu" class="button-menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+ 
+    </header >
     <main>
         <section class="section1">
           <article class="articulo1">
@@ -105,17 +113,18 @@
           <h4>Simplify hoy your team words today.</h4> 
           <button class="btn bg-white">Get Started</button>
         </section>
+        
     </main>
+
     <footer>
-       
         <div>
          <img src="./img/logoBlanco.png" alt="Logo">
          <ul>
-            <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
-            <li><a href="#"><i class="fab fa-youtube-square"></i></a></li>
-            <li><a href="#"><i class="fab fa-twitter"></i></a></li> 
-            <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
-            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fab fa-facebook-square m-15"></i></a></li>
+            <li><a href="#"><img class="youtube m-15" src="./img/icon-youtube.svg" alt="youtube"></a></li>
+            <li><a href="#"><i class="fab fa-twitter m-15"></i></a></li> 
+            <li><a href="#"><i class="fab fa-pinterest m-15"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram m-15"></i></a></li>
          </ul>
 
         </div>
@@ -132,12 +141,15 @@
             <li><a href="#">Privacy Police</a></li>
         </ul>
       </nav>
-      <form action="./results">
-            <input type="text" name="suscripcion" placeholder="Update in your inbox">
+      <form action="./results" method="post">
+            <input class="email" type="email" name="suscripcion" placeholder="Update in your inbox" required>
             <button class="btn bg-orange">Go</button>
       </form>
-      <p>Copyright 2020. All Rights Reserved</p>
+      <p class="copyright">Copyright 2020. All Rights Reserved</p>
         
     </footer>
+    
+    
+    <script src="./js/main.js"></script>
 </body>
 </html>

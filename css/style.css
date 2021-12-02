@@ -6,41 +6,128 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background-image: url('../img/bg-simplify-section-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
 
 /*Header*/
-header nav{
+
+h1{
+    position: absolute;
+    font-size: 1px;
+    color: white;
+    top:0;
+    left: 0;
+    order:-1;
+    
+}
+header.main-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    padding: 40px 30px;
     margin-bottom: 20px;
+    margin-left: 0;
+    padding: 20px 20px;
+    width: 100%
+   
+   
 }
+.main-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-left: -100%;
+    transition: all .2s linear;
+    background-color:white;
+    z-index: 100;
+}
+.main-nav.show{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 0;
+    padding-top: 10vh;
+    height: 47vh;
+    background-color:#FFF0EC;
+       
+
+  }
+
+  li:hover{
+  transform: scale(1.2);
+  }
+
+.button-menu{
+width: 40px;
+height: 40px;
+border: none;
+display: flex;
+background: none;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+z-index: 200;
+}
+
+.button-menu span{
+    width: 37px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background:#242E52;
+    border-radius: 3px;
+    transform-origin: 4px 0px;
+    transition: all .2s linear;
+    }
+
+    .button-menu.close span:nth-child(1){
+        transform: rotate(30deg) translate(1px, 2px);
+        width: 20px;
+      }
+    .button-menu.close span:nth-child(2){
+        transform: rotate(-30deg) translate(-1px, -2px);
+        width: 20px;
+      }
+      
+    .button-menu.close span:nth-child(3){
+        display: none;
+      }
+      
+      
 
 nav img{
-    width: 130px;
+    width: 120px;
+    
 }
 
-nav i.fas.fa-bars{
-    font-size: 20px;
+.lista-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20vh;
+    list-style: none;
+    text-align: center;
+}
+.link-item{
+  position: relative;
+  color:#242E52;
+  text-decoration: none;
+  font-family: 'Be Vietnam Pro', sans-serif;
+ 
+  margin: 20px;
+  
+  
+ 
 }
 
-nav button.btn.bg-orange{
-    display: none;
-}
 
-header nav ul{
-    display: none;
-
-}
-
-header nav ul a{
-    text-decoration: none;
-    color:#242E52; 
-    font-family: 'Be Vietnam Pro', sans-serif;
-    font-style: normal;
-    font-size: 16px;
-}
 
 /*Button and link*/
 .btn{
@@ -50,6 +137,7 @@ header nav ul a{
     padding: 10px 20px;
     color: #FFFFFF;
     font-weight: 500;
+    
 }
 .bg-orange{
     background-color: #F3603B;
@@ -62,7 +150,7 @@ header nav ul a{
 button:hover{
     background-color: #242E52;
     cursor: pointer;
-    
+    transform: translateY(-2px);
 }
 
 /*Sección 1*/
@@ -149,7 +237,7 @@ section.section2 article.articulo1{
     align-items: center;
     font-family: 'Be Vietnam Pro', sans-serif;
     font-size: 20px;
-    background-color: #ffe0fa;
+    background-color: #FFF0EC;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px ;
     margin-left: 10px;
@@ -202,9 +290,9 @@ section.section3 div{
 
 section.section3 div article img{
     position: relative;
-    bottom: 50px;
+    bottom:60px;
     width: 30%;
-    padding-bottom: 20px;
+  
 }
 section.section3 div article{
     display: flex;
@@ -254,6 +342,10 @@ main section.section4 h4{
     padding-bottom: 20px;
 }
 
+/*footer*/
+.m-15{
+margin: 15px;
+}
 footer{
     display: flex;
     flex-direction: column;
@@ -277,12 +369,11 @@ footer div ul li{
 }
 footer div ul li i{
     font-size: 30px;
-    padding: 15px;
     color: white;
 }
 
 footer div ul li i:hover{
-    font-size: 40px;
+    transform: scale(1.5);
     cursor: pointer;
 }
 
@@ -294,6 +385,7 @@ padding-top: 20px;
 footer nav ul li a{
     text-decoration: none;
     color: white;
+    
 }
 
 footer nav ul li{
@@ -301,7 +393,16 @@ footer nav ul li{
     padding:3px 25px;
     font-family: 'Be Vietnam Pro', sans-serif;
     font-size: 16px;
+    
 
+}
+
+.youtube{
+    width: 30px;
+   
+}
+.youtube:hover{
+    transform: scale(1.5);
 }
 
 footer form{
@@ -313,6 +414,7 @@ footer form input{
     border-radius: 30px;
     padding: 10px;
 }
+
 footer div{
     display: flex;
     flex-direction: column-reverse;
@@ -321,7 +423,6 @@ footer div{
     
 
 }
-
 
 footer div img{
     padding-top: 20px;
@@ -334,34 +435,51 @@ footer div ul{
     padding: 20px;
 }
 
-footer p{
+
+
+footer p.copyright{
     color:#8C8C94;
 }
-/*Responsive*/
-@media (min-width: 665px){
-    /* Tablets */
-}
 
-@media (min-width: 1024px){
+
+@media (min-width: 1150px){
     /* Laptop y escritorio*/
 
-    header nav{
-        margin: 20px 80px 40px;
-    }
-    header nav ul{
-        display: flex;
-        justify-content: space-between;
-        width: 500px;
-        list-style: none;
-    
-    
-    }
-    nav button.btn.bg-orange{
-        display: block;
-    }
-    nav i.fas.fa-bars{
+
+    .button-menu{
         display: none;
-          }
+    }
+
+    img.logo1{
+        display: none;
+    }
+
+    .main-nav{
+        display: flex;
+        position: static;
+        margin-left: 0;
+        margin-top: 0;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background: none;
+        padding-left: 50px;
+        padding-right: 50px;
+        
+    }
+    nav ul.lista-menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 50%;
+        list-style: none;   
+       
+        
+    }
+
+    
+   
     section.section1 article.articulo1 div{
         align-items: flex-start;
         order: -1;
@@ -418,22 +536,34 @@ main section.section4 h4{
 }
 footer{
     flex-direction: row;
+    justify-content: center;
   
 }
 
-footer p{
-    display: inline-block;
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
+footer p.copyright{
+    position: relative;
+    align-self:flex-end;
+     left: 10px;
 }
 
 footer div{
     flex-direction: column;
     order: -3;
+
+}
+footer nav ul:nth-child(2){
+    position: relative;
+    left: 40%;
+}
+footer nav ul:nth-child(1){
+    position: relative;
+    left: 20%;
 }
 
 footer form{
+    position: relative;
+    left: 15%;
     order: 0;
+    
 }
 }
