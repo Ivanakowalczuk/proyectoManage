@@ -5,13 +5,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 body{
     background-image: url('../img/bg-simplify-section-desktop.svg');
     background-repeat: no-repeat;
     background-position: top right;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    
 }
-
 
 /*Header*/
 
@@ -44,7 +46,7 @@ header.main-header {
     margin-left: -100%;
     transition: all .2s linear;
     background-color:white;
-    z-index: 100;
+    z-index: 1;
 }
 .main-nav.show{
     display: flex;
@@ -53,7 +55,7 @@ header.main-header {
     align-items: center;
     margin-left: 0;
     padding-top: 10vh;
-    height: 47vh;
+    height: 100vh;
     background-color:#FFF0EC;
        
 
@@ -73,7 +75,7 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 cursor: pointer;
-z-index: 200;
+z-index: 2;
 }
 
 .button-menu span{
@@ -103,7 +105,7 @@ z-index: 200;
       
 
 nav img{
-    width: 120px;
+    width: 130px;
     
 }
 
@@ -111,7 +113,7 @@ nav img{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 20vh;
+    height: 30vh;
     list-style: none;
     text-align: center;
 }
@@ -119,12 +121,8 @@ nav img{
   position: relative;
   color:#242E52;
   text-decoration: none;
-  font-family: 'Be Vietnam Pro', sans-serif;
- 
-  margin: 20px;
+
   
-  
- 
 }
 
 
@@ -176,7 +174,6 @@ section.section1 article.articulo1 div{
     }
 
 section.section1 article.articulo1 h2{
-    font-family: 'Be Vietnam Pro', sans-serif;
     font-size: 2.5rem;
     font-weight: 700;
     margin-top: 20px;
@@ -186,7 +183,6 @@ section.section1 article.articulo1 h2{
     
 }
 section.section1 article.articulo1 p{
-    font-family: 'Be Vietnam Pro', sans-serif;
     font-size: 18px;
     font-weight: 500;
     color: #B3B2B7;
@@ -213,20 +209,15 @@ section.section2 article.articulo1{
     text-align: center;
    }
    section.section2 article.articulo1 h2{
-
-    font-family: 'Be Vietnam Pro', sans-serif;
     font-size: 2rem;
     color: #232851;
     margin-bottom: 20px;
    }
    section.section2 article.articulo1 p{
-    font-family: 'Be Vietnam Pro', sans-serif;
     font-size: 18px;
     font-weight: 500;
     color: #B3B2B7;
-    
     margin-bottom: 30px;
-
     
    }
 
@@ -257,10 +248,12 @@ section.section2 article.articulo1{
    }
 
    section.section2 article.articulo2 div p{
-       font-family: 'Be Vietnam Pro', sans-serif;
+      
        padding: 10px;
        color:#B3B2B7;
    }
+
+
 /*Sección 3*/
 
 section.section3{
@@ -275,25 +268,17 @@ section.section3 h2{
     font-family: 'Be Vietnam Pro', sans-serif; 
     font-size: 2rem;
     color: #232851;
-    margin-bottom: 60px;
+    margin-bottom: 100px;
     text-align: center;
 }
 
 section.section3 div{
     display: flex;
     justify-content: center;
-    align-items: center;
-   flex-wrap: wrap;
-   width: 100vw;
+    align-items: center;  
    margin-bottom: 20px;
 }
 
-section.section3 div article img{
-    position: relative;
-    bottom:60px;
-    width: 30%;
-  
-}
 section.section3 div article{
     display: flex;
     flex-direction: column;
@@ -305,7 +290,16 @@ section.section3 div article{
     padding: 20px;
     width: 90%;
 }
-
+section.section3 div article img{
+    position: relative;
+    bottom: calc( 310px/2 - (130px /2) );
+    width: 130px;
+  
+}
+section.section3 div article h4{
+    position: relative;
+    bottom: 20px;
+}
 section.section3 div article p{
  font-size: 1rem;
  color: #B9B9C1;
@@ -324,6 +318,11 @@ section.section3 div article.cardRichard{
 section.section3 div article.cardAnisha{
     display: none;
 }
+
+
+
+
+/*Sección 4*/
 
 main section.section4{
 display: flex;
@@ -445,7 +444,7 @@ footer p.copyright{
 @media (min-width: 1150px){
     /* Laptop y escritorio*/
 
-
+/*Header*/
     .button-menu{
         display: none;
     }
@@ -476,10 +475,9 @@ footer p.copyright{
         list-style: none;   
        
         
-    }
-
-    
+    }    
    
+    /*Sección 1*/
     section.section1 article.articulo1 div{
         align-items: flex-start;
         order: -1;
@@ -496,74 +494,80 @@ footer p.copyright{
          width: 74%;
          
         }
-
-        section.section2 {
-            align-items: flex-start;
+/*Sección 3*/
+    section.section2 {
+        align-items: flex-start;
         }
-        section.section2 article.articulo1{
-            display: flex;
-           text-align: left;
-            width: 40%;
-            margin-top: 0px;
+
+    section.section2 article.articulo1{
+        display: flex;
+        text-align: left;
+        width: 40%;
+        margin-top: 0px;
         }
 
        
-        section.section2 article.articulo2{
-            width: 40%;
+    section.section2 article.articulo2{
+         width: 40%;
 
         }
 
-        section.section2 article.articulo2 div div.titulo{
-            background-color: white;
-} 
+    section.section2 article.articulo2 div div.titulo{
+        background-color: white;
+        } 
 
-section.section3 div article{
-    width: 30%;
-}
-section.section3 div article.cardRichard{
-    display: flex;
-}
+/*Sección 3*/
 
-section.section3 div article.cardAnisha{
-    display: flex;
-}
-main section.section4{
-    flex-direction: row;
-}
-main section.section4 h4{
-    width: 500px;
-    text-align: left;
-}
-footer{
-    flex-direction: row;
-    justify-content: center;
-  
-}
+    section.section3 div article{
+       width: 30%;
+    }
+    section.section3 div article.cardRichard{
+       display: flex;
+    }
 
-footer p.copyright{
-    position: relative;
-    align-self:flex-end;
-     left: 10px;
-}
-
-footer div{
-    flex-direction: column;
-    order: -3;
-
-}
-footer nav ul:nth-child(2){
-    position: relative;
-    left: 40%;
-}
-footer nav ul:nth-child(1){
-    position: relative;
-    left: 20%;
-}
-
-footer form{
-    position: relative;
-    left: 15%;
-    order: 0;
+    section.section3 div article.cardAnisha{
+      display: flex;
+    }
     
-}
+    /*Sección 4*/
+    main section.section4{
+      flex-direction: row;
+    }
+    main section.section4 h4{
+     width: 500px;
+     text-align: left;
+    }
+
+    /*Footer*/
+    footer{
+       flex-direction: row;
+       justify-content: center;
+    }
+
+    footer p.copyright{
+      position: relative;
+      align-self:flex-end;
+      left: 10px;
+    }
+
+    footer div{
+      flex-direction: column;
+      order: -3;
+    }
+
+    footer nav ul:nth-child(2){
+      position: relative;
+      left: 40%;
+    }
+
+    footer nav ul:nth-child(1){
+      position: relative;
+      left: 20%;
+    }
+
+    footer form{
+      position: relative;
+      left: 15%;
+      order: 0;
+    }
 }
